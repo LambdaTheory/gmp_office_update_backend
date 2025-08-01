@@ -17,7 +17,7 @@ const GITHUB_CONFIG = {
 
 // Vercel 配置
 const VERCEL_CONFIG = {
-  DEPLOY_HOOK: process.env.VERCEL_DEPLOY_HOOK || "https://api.vercel.com/v1/integrations/deploy/prj_2lyRUdJlQtJHtGHBLORQH5AaR1N7/S6eHSWgGVo",
+  DEPLOY_HOOK: process.env.DEPLOY_HOOK_URL || "https://api.vercel.com/v1/integrations/deploy/prj_2lyRUdJlQtJHtGHBLORQH5AaR1N7/S6eHSWgGVo",
 };
 
 module.exports = {

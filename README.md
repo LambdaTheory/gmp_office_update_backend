@@ -147,17 +147,26 @@ gmp_update_backend/
 
 ## 部署
 
-### 开发环境
+### 本地开发环境
 
 ```bash
 pnpm run dev
 ```
 
+### Vercel 部署
+
+项目已配置好 Vercel 部署，详细步骤请查看 [DEPLOYMENT.md](./DEPLOYMENT.md)
+
+1. 推送代码到 GitHub
+2. 在 Vercel 中导入项目
+3. 配置环境变量
+4. 自动部署完成
+
 ### 生产环境
 
-1. 设置生产环境变量
-2. 运行 `pnpm start`
-3. 确保端口 3000 可访问
+```bash
+pnpm start
+```
 
 ## 许可证
 

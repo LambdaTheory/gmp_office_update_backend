@@ -67,12 +67,15 @@ app.use((err, req, res, next) => {
 });
 
 // 启动服务器
-app.listen(PORT, () => {
-  console.log(`🚀 Server is running on port ${PORT}`);
-  console.log(`📍 API URL: http://localhost:${PORT}`);
-  console.log(`🏥 Health check: http://localhost:${PORT}/api/health`);
-  console.log(`📊 Update Records: http://localhost:${PORT}/read-update-record`);
-  console.log(`🎮 Games Sync: http://localhost:${PORT}/api/games/sync`);
-});
+// 在Vercel环境下不需要手动启动服务器
+if (process.env.NODE_ENV !== 'production') {
+  app.listen(PORT, () => {
+    console.log(`🚀 Server is running on port ${PORT}`);
+    console.log(`📍 API URL: http://localhost:${PORT}`);
+    console.log(`🏥 Health check: http://localhost:${PORT}/api/health`);
+    console.log(`📊 Update Records: http://localhost:${PORT}/read-update-record`);
+    console.log(`🎮 Games Sync: http://localhost:${PORT}/api/games/sync`);
+  });
+}
 
 module.exports = app;
